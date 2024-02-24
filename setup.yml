@@ -1,0 +1,5 @@
+tasks:
+    - name: install the latest version of Squid
+      yum:
+        name: squid
+        state: latest
