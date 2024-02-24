@@ -22,10 +22,10 @@
         group: squid
         mod: 0640
     - name: enable squid
-        service:
-          name: squid
-          state: running
-          enabled: yes
+      service:
+        name: squid
+        state: running
+        enabled: yes
 
   handlers:
     - name: enable service squid
