@@ -15,12 +15,12 @@
         group: squid
         mode: 0640
     - name: set user authentication file
-        template:
-          src: /home/ec2-user/ansible/template/.users
-          dest: /etc/squid/.users
-          owner: root
-          group: squid
-          mod: 0640
+      template:
+        src: /home/ec2-user/ansible/template/.users
+        dest: /etc/squid/.users
+        owner: root
+        group: squid
+        mod: 0640
     - name: enable squid
         servce:
           name: squid
