@@ -21,4 +21,4 @@
     - name: start service squid
       service:
         name: squid
-        state: started:
+        state: started
