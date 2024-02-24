@@ -22,7 +22,7 @@
         group: squid
         mod: 0640
     - name: enable squid
-        servce:
+        service:
           name: squid
           state: running
           enabled: yes
