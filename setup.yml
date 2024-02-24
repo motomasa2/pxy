@@ -1,7 +1,4 @@
 - hosts: localhost
-  vars:
-    squid_org_conf: /etc/squid/squid.conf
-    squid_auth_conf: /home/ec2-user/ansible/template/squid.conf
   
   become: yes
   
@@ -12,8 +9,8 @@
         state: latest
     - name: replase squid conf with user authentication based config
       template: 
-        src=./template/squid.conf
-        dest=/etc/squid/squid.conf
+        src: /home/ec2-user/ansible/template/squid.conf
+        dest: /etc/squid/squid.conf
         owner: root
         group: squid
         mode: 0640
