@@ -11,7 +11,12 @@
         name: squid
         state: latest
     - name: replase squid conf with user authentication based config
-      template: src=squid_auth_conf dest=squid_org_conf
+      template: 
+        src=./template/squid.conf
+        dest=/etc/squid/squid.conf
+        owner: root
+        group: squid
+        mode: 0640
 
   handlers:
     - name: enable service squid
