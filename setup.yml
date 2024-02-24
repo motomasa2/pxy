@@ -21,6 +21,11 @@
           owner: root
           group: squid
           mod: 0640
+    - name: enable squid
+        servce:
+          name: squid
+          state: running
+          enabled: yes
 
   handlers:
     - name: enable service squid
