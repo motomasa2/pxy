@@ -1,4 +1,6 @@
-tasks:
+- hosts: localhost
+  become: yes
+  tasks:
     - name: install the latest version of Squid
       yum:
         name: squid
